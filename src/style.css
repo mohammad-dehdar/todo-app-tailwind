@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --color-primary: #f9d72f;
+    --color-bg: #e6e6e6;
+    --color-task: #f7f7f7;
+    --color-success: #36d39a;
+    --color-warning: #fbbe23;
+    --color-error: #f87171;
+}
+
+
+@layer base {
+    input {
+      @apply mr-2.5 w-full border  border-primary rounded-md p-2.5 text-gray-500;
+    }
+    
+    input:focus {
+      @apply outline-none border-2;
+    }
+
+    button {
+        @apply bg-primary border-none cursor-pointer px-2.5 py-3 rounded-lg
+    }
+
+    button:hover {
+        @apply opacity-70
+    }
+
+    thead {
+        @apply bg-bg
+    }
+
+    thead  th {
+        @apply p-2.5
+    }
+
+    thead  th:first-child {
+        @apply rounded-tl-xl
+    }
+    
+    thead  th:last-child {
+        @apply rounded-tr-xl
+    }
+    tbody td{
+        @apply bg-task text-center
+    }
+    tbody td button {
+        @apply px-1 py-2 mx-0.5 my-1.5
+    }
+
+    tbody td button:nth-child(1) {
+        @apply bg-warning
+    }
+    tbody td button:nth-child(2) {
+        @apply bg-success
+    }
+    tbody td button:nth-child(3) {
+        @apply bg-error
+    }
+    #alert-message {
+        @apply w-full h-10 flex items-center mb-2
+    }
+  }
